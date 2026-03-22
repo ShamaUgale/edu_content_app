@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">StockMarket Tutorials</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to access your tutorials</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Sign In</string>
+    <string name="logout_button">Log Out</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="categories_title">Categories</string>
+    <string name="my_videos_title">My Videos</string>
+    <string name="admin_panel_title">Admin Panel</string>
+    <string name="manage_users">Manage Users</string>
+    <string name="manage_videos">Manage Videos</string>
+    <string name="add_user">Add User</string>
+    <string name="add_video">Add Video</string>
+    <string name="security_alert_title">Security Alert</string>
+    <string name="root_detected">This app cannot run on rooted devices for security reasons.</string>
+    <string name="emulator_detected">This app cannot run on emulators for security reasons.</string>
+    <string name="device_bound_error">Your account is bound to a different device. Contact admin.</string>
+    <string name="session_expired">Your session has expired. Please log in again.</string>
+    <string name="no_videos_assigned">No videos assigned to you yet.</string>
+    <string name="loading">Loading...</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="video_player_title">Video Player</string>
+</resources>

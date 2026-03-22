@@ -1,0 +1,35 @@
+# Android
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Firebase
+google-services.json
+.firebase/
+firebase-debug.log
+
+# Node (Cloud Functions)
+backend/functions/node_modules/
+backend/functions/package-lock.json
+
+# IDE
+*.swp
+*.swo
+*~
+.vscode/
+
+# Secrets
+*.keystore
+*.jks
+local.properties

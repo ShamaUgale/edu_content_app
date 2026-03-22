@@ -1,0 +1,42 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // ============================================
+    // Video Files
+    // ============================================
+    match /videos/{videoFile} {
+      // Only authenticated users can read videos
+      // Actual access control per-video is handled by Cloud Functions
+      // which generate signed URLs
+      allow read: if request.auth != null;
+
+      // Only admins can upload/modify/delete video files
+      // Admin role is verified server-side via Cloud Functions
+      // Direct uploads should be done via Firebase Console or Cloud Functions
+      allow write: if false; // Use Cloud Functions for uploads
+
+      // Maximum file size: 2GB
+      allow read: if request.auth != null
+                  && resource.size < 2 * 1024 * 1024 * 1024;
+    }
+
+    // ============================================
+    // Thumbnails
+    // ============================================
+    match /thumbnails/{thumbFile} {
+      // Authenticated users can read thumbnails
+      allow read: if request.auth != null;
+
+      // Only via Cloud Functions or Firebase Console
+      allow write: if false;
+    }
+
+    // ============================================
+    // Default: Deny all
+    // ============================================
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
